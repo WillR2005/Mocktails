@@ -1,7 +1,7 @@
 <?php
 include 'includes/connDB.php';
 
-$upReci = "UPDATE mocktail_recipes SET Title = ?, ingredients = ?, instructions = ?, WHERE uid = ?";
+$upReci = "UPDATE mocktail_recipes SET Title = ?, ingredients = ?, instructions = ? WHERE uid = ?";
 
 $upStmt = $conn->prepare($upReci);
 if($upStmt === false) {
@@ -14,7 +14,7 @@ $ingredients = json_encode("");
 
 $instructions = json_encode("");
 
-$uid = ;
+$uid =0 ;
 
 $upStmt->bind_param("sssi",$Title,$ingredients,$instructions,$uid);
 
