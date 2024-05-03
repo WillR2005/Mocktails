@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
 <form method="post" action="mocktailadd.php">
-   
+
 <input type="text" name= "Title">
 <br><br>
 <input type="text" name="Ingredients">
