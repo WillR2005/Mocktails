@@ -1,8 +1,23 @@
 <?php
 include 'includes/connDB.php';
 
-$sql = "INSERT INTO mocktail_recipes (Title,ingredients,instructions)VALUE (?,?,?)";
+$stmt = $conn->prepare("INSERT INTO mocktail_recipes (Title,ingredients,instructions)VALUE (?,?,?)");
+;
 
-$stmt = $conn->prepare($sql);
+$stmt->bind_param("sss", $Title, $ingredients,$instructions);
 
-$stmt->bind_param("sss", $title, $ingredients,$instructions);
+
+$Title = $_POST['Title'] ;
+$ingredients = $_POST['Ingredients'];
+$instructions =$_POST['Instructions'];
+
+if ($stmt->execute()) {
+    echo "New record created successfully";
+} else{
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+
+// Close statement and connection
+$stmt->close();
+$conn->close();
