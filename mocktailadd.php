@@ -1,15 +1,16 @@
 <?php
 include 'includes/connDB.php';
 
-$stmt = $conn->prepare("INSERT INTO mocktail_recipes (Title,ingredients,instructions)VALUE (?,?,?)");
-;
+$sql = "INSERT INTO mocktail_recipes (Title,ingredients,instructions)VALUES (?,?,?)";
+
+$stmt = $conn->prepare($sql);
 
 $stmt->bind_param("sss", $Title, $ingredients,$instructions);
 
 
 $Title = $_POST['Title'] ;
-$ingredients = $_POST['Ingredients'];
-$instructions =$_POST['Instructions'];
+$ingredients = json_encode($_POST['Ingredients']);
+$instructions =json_encode($_POST['Instructions']);
 
 if ($stmt->execute()) {
     echo "New record created successfully";
