@@ -7,6 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mixolotl</title>
+    <link rel="icon"type="images/axolotl.jpg" href="/images/axolotl.jpg">
     <style>
       body{background-color: #FEE2F5;
         }#playerContainer a:hover{
@@ -14,8 +15,8 @@ session_start();
       }
         header{
         background-color:#F5AFA7 ;
-        min-height:2vw ;
-        border: thin solid #e7d5d3 ;
+        height:2vw ;
+        border: thin outset #e7d5d3 ;
         display: flex;
       position: fixed;
      top: 0; 
@@ -25,34 +26,58 @@ session_start();
       }
       main{
         height:550px ;
-        width: 550px;
+        width: 500px;
         max-width: 50vw;
         background-color: rgb(230, 203, 230);
-        color: rgb(63, 100, 88);
+        border: 3px solid #C6A6C7 ;
+        
         padding: 5px;
         display:grid;
         grid: auto / auto auto auto;
+        margin-left: auto;
+        margin-right: auto;
       }
       section{
         margin: 10px;
         padding: 5px;
         height: 200px;
         width: 200px;
+        margin-left: auto;
+       margin-right: auto;
+       color:#454545;
         
       }
       .Create{
         background-color: #F5DB74;
+        text-align: center;
+        
 
       }
       .Search{
         background-color: #7E98E9;
+        text-align: center;
+        
       }
 
       .Top{
         background-color:#2D9A03;
+        text-align: center;
+        
       }
       .Account{
         background-color:#A7869D;
+        text-align: center;
+        
+      }
+      footer{
+        background-color:#A46097;
+        padding: 200px;
+        display: flex;
+        position: fixed;
+        
+        
+       left: 0; 
+       right: 0;
       }
 
 
@@ -76,11 +101,7 @@ session_start();
 
     echo "<p>Good Afternoon:$user.</p>";
     ?>
-    <form method="post" action="validate.php">
-    <input type="text" name= "user">
-    <input type="submit">
-    <input type="password" name="pword">
-</form>
+    
 <main>
 
 <section id ="CreateMocktail"class = "Create">
@@ -112,5 +133,9 @@ session_start();
 </div>
 </section>
 </main>
+
+<footer>
+  </footer>
+
 </body>
 </html>

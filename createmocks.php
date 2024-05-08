@@ -12,7 +12,8 @@ session_start();
 <body>
 <form method="post" action="mocktailadd.php">
 
-<input type="text" name= "Title">
+
+<p>Enter Mocktail Name</p><input type="text" name= "Title">
 <br><br>
 <input type="text" name="Ingredients">
 <br><br>
