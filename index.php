@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mocktails</title>
+    <title>Mixolotl</title>
     <style>
       body{background-color: #FEE2F5;
         }#playerContainer a:hover{
@@ -21,9 +21,11 @@ session_start();
      top: 0; 
      left: 0; 
      right: 0;
+     
       }
       main{
-        min-height: 50vw;
+        height:550px ;
+        width: 550px;
         max-width: 50vw;
         background-color: rgb(230, 203, 230);
         color: rgb(63, 100, 88);
@@ -34,10 +36,26 @@ session_start();
       section{
         margin: 10px;
         padding: 5px;
-        max-width: 40vw;
-        max-height: 40vw;
-        background-color: #E2CD7A;
+        height: 200px;
+        width: 200px;
+        
       }
+      .Create{
+        background-color: #F5DB74;
+
+      }
+      .Search{
+        background-color: #7E98E9;
+      }
+
+      .Top{
+        background-color:#2D9A03;
+      }
+      .Account{
+        background-color:#A7869D;
+      }
+
+
       section:hover{
         background-color: blanchedalmond;
         
@@ -50,7 +68,7 @@ session_start();
 <body>
     <?php
    
-    echo "<h1>Welcome to the Mocktail Website</h1>";
+    echo "<h1> <br> Welcome to the Mocktail Website</h1>";
     if(isset($_SESSION['user'])){
       $user=  $_SESSION['user'];
     }else
@@ -64,12 +82,35 @@ session_start();
     <input type="password" name="pword">
 </form>
 <main>
-<section id ="CreateMocktail"class = "card">
+
+<section id ="CreateMocktail"class = "Create">
 
     <div class="description">
-        <h2><u>Mocktail builder</u> </h2>
+        <h2><u>Mocktail <br>   builder</u> </h2>
         <p> </p>
     </div>
+    </section>
+<section id ="SearchMocktail"class = "Search">
+
+
+    <div class="description">
+        <h2><u>Search for Mocktails</u> </h2>
+        <p> </p>
+    </div>
+    </section>
+<br>
+<section id ="TopMocktail"class = "Top">
+  <div class="description">
+        <h2><u>Top Mocktails</u> </h2>
+        <p> </p>
+    </div>
+    </section>
+<section id ="AccountMocktail"class = "Account">
+  <div class="description">
+    <h2><u>Edit Account</u> </h2>
+    <p> </p>
+</div>
+</section>
 </main>
 </body>
 </html>
