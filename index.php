@@ -81,11 +81,26 @@ session_start();
       }
 
 
-      section:hover{
+      .Create:hover{
         background-color: blanchedalmond;
         
 
       }
+      .Search:hover{
+        background-color:#A7B8FF;
+      }
+      .Top:hover{
+        background-color:#3AC704 ;
+      }
+      .Account:hover{
+        background-color:#CFA6C2;
+      }
+      .createmock{{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}}
     </style>
     <script></script>
 </head>
@@ -104,11 +119,14 @@ session_start();
     
 <main>
 
-<section id ="CreateMocktail"class = "Create">
+<section id ="CreateMocktail"class = "Create" >
 
     <div class="description">
-        <h2><u>Mocktail <br>   builder</u> </h2>
-        <p> </p>
+   
+    <div class="createmock"><h2><u>Mocktail <br>   builder</u> </h2></div>
+
+        
+        
     </div>
     </section>
 <section id ="SearchMocktail"class = "Search">
