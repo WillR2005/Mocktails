@@ -1,13 +1,45 @@
 <?php
-session_start();
+include 'includes/connDB.php';
+
+ 
+ 
+
+
+$sql = "SELECT id, uname FROM mocktail_users";
+$result = mysqli_query($conn, $sql);
+
+$pas = "SELECT uid,pass_hash FROM mocktail_passwords";
+$presult = mysqli_query($conn, $pas);
+
 
 $user= $_POST['user'];
-$password = $_POST['pword'];
-$hashed= password_hash($password,PASSWORD_DEFAULT);
-echo $hashed;
-//echo $user;
-$answer= '$2y$10$PW2WAQPxnB0cO.T57PfnG.uBSGZHQ96JFOLdPU/lIrrTbCnAwdNYe';
-$valid =  password_verify($password,$answer);
+$pass = $_POST['pword'];
+//$hashpass= password_hash($pass,PASSWORD_DEFAULT);
+
+while($row = mysqli_fetch_assoc($result)) {
+    if ( $row["uname"] == $user)
+    {
+        $userid = $row["id"];
+       
+        while($prow = mysqli_fetch_assoc($presult))
+        {
+            if ( $userid ==$prow["uid"] )
+            {
+                $trpass =$prow["pass_hash"];
+            }
+        }
+    }
+  
+}
+
+if (password_verify($pass, $trpass)){
+    echo "Password Valid";
+}else{
+    echo "invalid password";
+}
+
+
+mysqli_close($conn);
 
 
 /*if ($valid ==true){
@@ -20,8 +52,8 @@ $_SESSION['user']= $user;
 ?> */
 
 
-// user = Will, pass= Password123, pass_hash = $2y$10$hj1vG980uGQSSXjhLFaExOKMTSBRGNRThGdH.ANprPQyKmnEMFM1u
+ //user = WillR2005, pass= Password123, pass_hash = $2y$10$hj1vG980uGQSSXjhLFaExOKMTSBRGNRThGdH.ANprPQyKmnEMFM1u
 
-// user = Lemons, pass= Letmein1 , pass_hash= $2y$10$CPFKbvzWeUVzREw4UwfjquJtyuwzJRLhVxxzGjQQ.px7veTDg3DXK
+// user = Lemons1465, pass= Letmein1 , pass_hash= $2y$10$CPFKbvzWeUVzREw4UwfjquJtyuwzJRLhVxxzGjQQ.px7veTDg3DXK
 
-// pass =Mocktails123 hash =  $2y$10$RDr/MOZJ12aNVxMtCyYRpOeZaeXQ5cj2CNpcdO3sabGyuyClFvqcO
+// user = Willo345,pass =Mocktails123 hash =  $2y$10$RDr/MOZJ12aNVxMtCyYRpOeZaeXQ5cj2CNpcdO3sabGyuyClFvqcO
