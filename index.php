@@ -65,7 +65,7 @@ session_start();
         
       }
       .Account{
-        background-color:#A7869D;
+        background-color:#EBA0B9;
         text-align: center;
         
       }
@@ -144,13 +144,19 @@ session_start();
         <p> </p>
     </div>
     </section>
-<section id ="AccountMocktail"class = "Account">
+<section id ="AccountMocktail"class = "Account" onclick="Account()">
   <div class="description">
-    <h2><u>Edit Account</u> </h2>
+    <h2><u> Account</u> </h2>
     <p> </p>
+    
 </div>
 </section>
 </main>
+<script>
+  function Account(){
+    location.replace("Login.php");
+  }
+</script>
 
 <footer>
   </footer>
