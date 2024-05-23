@@ -1,0 +1,11 @@
+What needs to be on mocktail website
+
+Home page
+
+Account
+
+Search Mocktails
+
+Add mocktails
+
+edit mocktails

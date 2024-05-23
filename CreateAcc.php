@@ -44,6 +44,25 @@
         
         
       }
+      section{
+        margin: 10px;
+        padding: 5px;
+        height: 50px;
+        width: 500px;
+        margin-left: auto;
+       margin-right: auto;
+        background-color: #E0B8EB;
+        border: 3px solid #C6A6C7 ;
+        
+        
+      }
+    }#playerContainer a:hover{
+        text-decoration: underline;
+      }
+      .old:hover{
+        background-color:#ECC2F7;
+
+      }
 </style>
 <header></header>
 
@@ -63,7 +82,13 @@
     
 </form>
 
-    </main>  
+    </main> 
+    <section  class= "old"onclick=newAcc()> <p><u>Already have an account?</u></p></section>
+    <script>
+        function newAcc(){
+    location.replace("Login.php");
+  }
+    </script> 
 
    <footer> </footer>
 </body>
