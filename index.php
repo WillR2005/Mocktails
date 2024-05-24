@@ -153,12 +153,13 @@ session_start();
     }else
     {$user = "User";}
 
-    echo "<p>Good Afternoon:$user.</p>";
+    echo "<p>Good Afternoon:$_SESSION[userd].</p>";
+   
     ?>
     
 <main>
 
-<section id ="CreateMocktail"class = "Create" >
+<section id ="CreateMocktail"class = "Create" onclick=" Mockbuild()" >
 
     <div class="description">
    
@@ -193,7 +194,13 @@ session_start();
 </main>
 <script>
   function Account(){
-    location.replace("Login.php");
+    
+   
+    location.replace("logincheck.php");
+   
+  }
+  function Mockbuild(){
+    location.replace("createmocks.php");
   }
 </script>
 

@@ -1,9 +1,7 @@
 <?php
 include 'includes/connDB.php';
-
- 
- 
-
+session_start();
+$_SESSION["userd"]="";
 
 $sql = "SELECT id, uname FROM mocktail_users";
 $result = mysqli_query($conn, $sql);
@@ -34,14 +32,32 @@ while($row = mysqli_fetch_assoc($result)) {
 
 if (password_verify($pass, $trpass)){
     echo "Password Valid";
+    
+    $_SESSION["userd"]= $user;
+    $_SESSION["login"]= true;
+    $_SESSION["Id"]= $userid;
 }else{
     echo "invalid password";
 }
 
 
 mysqli_close($conn);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Refresh" content="0; url='index.php'" />
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
 
 
+<?php
 /*if ($valid ==true){
     echo "Password Correct.";
 }else{
