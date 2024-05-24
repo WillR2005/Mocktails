@@ -153,8 +153,21 @@ session_start();
     }else
     {$user = "User";}
 
+    
+    date_default_timezone_set('europe/London');
+    $date = new \DateTime();
+   $time = date_format($date, 'G');
+
+   if($time >= 15 && $time <= 18)
+   {
     echo "<p>Good Afternoon:$_SESSION[userd].</p>";
-   
+   }
+   elseif($time >= 19 && $time <= 5)
+   echo "<p>Good Evening:$_SESSION[userd].</p>";
+   elseif($time >= 6 && $time <= 12)
+   echo "<p>Good Morning:$_SESSION[userd].</p>";
+
+
     ?>
     
 <main>
