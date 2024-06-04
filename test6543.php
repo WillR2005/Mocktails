@@ -2,6 +2,10 @@
 include 'includes/connDB.php';
 session_start();
 
-$qls ="SELECT * FROM mocktail_users ORDER BY id DESC LIMIT 1;";
+$sql = "SELECT id FROM mocktail_users";
+$result = mysqli_query($conn, $sql);
 
-echo $qls ;
+//print value to screen
+$row = mysqli_fetch_assoc($result);
+$nrow = intval($row) +1;
+echo $nrow;

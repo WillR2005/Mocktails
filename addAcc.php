@@ -1,10 +1,11 @@
 <?php
 include 'includes/connDB.php';
+session_start();
 
 $sql = "INSERT INTO mocktail_users (uname,name,email)VALUES (?,?,?)";
 $stmt = $conn->prepare($sql);
 
-$qsl = "INSERT INTO mocktail_passwords (uid,pass_hash)VALUES (?,?)";
+$qsl = "INSERT INTO mocktail_passwords (pass_hash)VALUES (?)";
 $pastmt = $conn->prepare($qsl);
 
 $stmt->bind_param("sss", $uname, $name,$email);
@@ -21,6 +22,9 @@ $pastmt->bind_param("s",$pass_hash);
 $pass_hash = password_hash($_POST['pword'],PASSWORD_DEFAULT);
 if ($pastmt->execute()) {
     echo "New record created successfully";
+    $_SESSION["userd"]= $uname;
+    $_SESSION["login"]= true;
+    $_SESSION["Id"]= $userid;
 } else{
     echo "Error: " . $qsl . "<br>" . $conn->error;
 }
