@@ -76,7 +76,7 @@
 <br><br>
 <input type="email" name="email"value=" Email">
 <br><br>
-<input type="password" name="pword" >
+<input type="password" name="pword"  >
 <br>   <br>
     <input type="submit">
     

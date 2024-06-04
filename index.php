@@ -182,7 +182,7 @@ session_start();
         
     </div>
     </section>
-<section id ="SearchMocktail"class = "Search">
+<section id ="SearchMocktail"class = "Search" onclick="search()">
 
 
     <div class="description">
@@ -214,6 +214,9 @@ session_start();
   }
   function Mockbuild(){
     location.replace("createmocks.php");
+  }
+  function search(){
+    location.replace("searchMock.php");
   }
 </script>
 
