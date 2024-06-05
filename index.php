@@ -138,20 +138,24 @@ session_start();
 <div class="dropdown">
   <button class="dropbtn">Menu</button>
   <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <a href="index.php">Index</a>
+    <a href="createmocks.php">Mocktail Builder</a>
+    <a href="searchMock.php">Mocktail Search</a>
+    <a href="logincheck.php">Account </a>
   </div>
 </div>
 </header>
 <body> 
     <?php
     
-    echo "<h1> <br> Welcome to the Mocktail Website</h1>";
-    if(isset($_SESSION['user'])){
-      $user=  $_SESSION['user'];
-    }else
-    {$user = "User";}
+    if( isset($_SESSION['login'])and $_SESSION['login']==true)
+    {
+      echo "<h1> <br> Welcome Back </h1>";
+
+    }
+    else{
+      echo "<h1> <br> Welcome to the Mocktail Website</h1>";}
+   
   /*
     
     date_default_timezone_set('europe/London');
@@ -195,12 +199,7 @@ session_start();
     </div>
     </section>
 <br>
-<section id ="TopMocktail"class = "Top">
-  <div class="description">
-        <h2><u>Top Mocktails</u> </h2>
-        <p> </p>
-    </div>
-    </section>
+
 <section id ="AccountMocktail"class = "Account" onclick="Account()">
   <div class="description">
     <h2><u> Account</u> </h2>

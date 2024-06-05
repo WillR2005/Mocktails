@@ -12,6 +12,7 @@ $presult = mysqli_query($conn, $pas);
 
 $user= $_POST['user'];
 $pass = $_POST['pword'];
+$trpass = "";
 //$hashpass= password_hash($pass,PASSWORD_DEFAULT);
 
 while($row = mysqli_fetch_assoc($result)) {
@@ -23,7 +24,8 @@ while($row = mysqli_fetch_assoc($result)) {
         {
             if ( $userid ==$prow["uid"] )
             {
-                $trpass =$prow["pass_hash"];
+                $trpass = $prow["pass_hash"];
+                
             }
         }
     }
@@ -55,7 +57,6 @@ mysqli_close($conn);
 
 </body>
 </html>
-
 
 <?php
 /*if ($valid ==true){
