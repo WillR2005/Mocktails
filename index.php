@@ -144,19 +144,23 @@ session_start();
   </div>
 </div>
 </header>
-<body>
+<body> 
     <?php
-   
+    
     echo "<h1> <br> Welcome to the Mocktail Website</h1>";
     if(isset($_SESSION['user'])){
       $user=  $_SESSION['user'];
     }else
     {$user = "User";}
-
+  /*
     
     date_default_timezone_set('europe/London');
     $date = new \DateTime();
    $time = date_format($date, 'G');
+   if ($_SESSION[userd]== "empty"){
+    echo " "; }
+   
+   else{
 
    if($time >= 15 && $time <= 18)
    {
@@ -166,8 +170,8 @@ session_start();
    echo "<p>Good Evening:$_SESSION[userd].</p>";
    elseif($time >= 6 && $time <= 12)
    echo "<p>Good Morning:$_SESSION[userd].</p>";
-
-
+}
+ */
     ?>
     
 <main>

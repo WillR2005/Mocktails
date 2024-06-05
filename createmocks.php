@@ -13,11 +13,11 @@ session_start();
 <form method="post" action="mocktailadd.php">
 
 
-<p>Enter Mocktail Name</p><input type="text" name= "Title">
+<p>Enter Mocktail Name</p><input type="text" name= "Title"value="Mocktail Name">
 <br><br>
-<input type="text" name="Ingredients">
+<input type="text" name="Ingredients" value="Ingredients">
 <br><br>
-<input type="text" name="Instructions">
+<input type="text" name="Instructions"value="Instructions">
 <br><br>
 <input type="submit">
 </form>
