@@ -139,7 +139,7 @@ session_start();
   <button class="dropbtn">Menu</button>
   <div class="dropdown-content">
     <a href="index.php">Index</a>
-    <a href="createmocks.php">Mocktail Builder</a>
+    <a href="mocklogin.php">Mocktail Builder</a>
     <a href="searchMock.php">Mocktail Search</a>
     <a href="logincheck.php">Account </a>
   </div>
@@ -150,7 +150,7 @@ session_start();
     
     if( isset($_SESSION['login'])and $_SESSION['login']==true)
     {
-      echo "<h1> <br> Welcome Back </h1>";
+      echo "<h1> <br> Welcome Back ".$_SESSION["userd"]." </h1>";
 
     }
     else{
@@ -216,7 +216,7 @@ session_start();
    
   }
   function Mockbuild(){
-    location.replace("createmocks.php");
+    location.replace("mocklogin.php");
   }
   function search(){
     location.replace("searchMock.php");

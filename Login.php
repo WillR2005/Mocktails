@@ -101,8 +101,8 @@ session_start();
 <header><div class="dropdown">
   <button class="dropbtn">Menu</button>
   <div class="dropdown-content">
-    <a href="index.php">Index</a>
-    <a href="createmocks.php">Mocktail Builder</a>
+  <a href="index.php">Index</a>
+    <a href="mocklogin.php">Mocktail Builder</a>
     <a href="searchMock.php">Mocktail Search</a>
     <a href="logincheck.php">Account </a>
   </div>

@@ -33,13 +33,11 @@ section {
    padding: 20px;
    border: 1px solid #ccc;
    background-color: #FDEAA0;
-    width: 1500px;
-    
 }
       .a1{
         background-color: #F5DB74;
         text-align: center;
-        left: 0 ;
+        
 
       }
       header h2 {
@@ -63,7 +61,8 @@ article {
         background-color:#A46097;
         padding: 200px;
         display: flex;
-       
+        position: fixed;
+        position: fixed;
        left: 0;
        bottom: 0;
        width: 100%;
@@ -107,15 +106,17 @@ article {
     color:#555;
 }
 
-
+div {
+    padding: 10px; 
+}
 </style>
 <body>
 <header>
 <div class="dropdown">
   <button class="dropbtn">Menu</button>
   <div class="dropdown-content">
-  <a href="index.php">Index</a>
-    <a href="mocklogin.php">Mocktail Builder</a>
+    <a href="index.php">Index</a>
+    <a href="createmocks.php">Mocktail Builder</a>
     <a href="searchMock.php">Mocktail Search</a>
     <a href="logincheck.php">Account </a>
   </div>

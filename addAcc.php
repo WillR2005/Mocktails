@@ -24,7 +24,7 @@ if ($pastmt->execute()) {
     echo "New record created successfully";
     $_SESSION["userd"]= $uname;
     $_SESSION["login"]= true;
-    $_SESSION["Id"]= $userid;
+    
 } else{
     echo "Error: " . $qsl . "<br>" . $conn->error;
 }
