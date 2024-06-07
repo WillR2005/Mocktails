@@ -1,16 +1,18 @@
 <?php
 include 'includes/connDB.php';
-
-$sql = "INSERT INTO mocktail_recipes (Title,ingredients,method)VALUES (?,?,?)";
+session_start();
+$sql = "INSERT INTO mocktail_recipes (uid,Title,ingredients,method)VALUES (?,?,?,?)";
 
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("sss", $Title, $ingredients,$method);
+$stmt->bind_param("ssss",$uid ,$Title, $ingredients,$method);
+
 
 
 $Title = $_POST['Title'] ;
 $ingredients = json_encode($_POST['Ingredients']);
 $method =json_encode($_POST['Instructions']);
+$uid = $_SESSION["Id"];
 
 if ($stmt->execute()) {
     echo "New record created successfully";
@@ -23,6 +25,8 @@ if ($stmt->execute()) {
 $stmt->close();
 $conn->close();
 
+?>
+<?php
 ?>
 <!DOCTYPE html>
 <html lang="en">

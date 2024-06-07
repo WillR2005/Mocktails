@@ -69,6 +69,10 @@ session_start();
         text-align: center;
         
       }
+      .Axolotl{
+        background-color: #C6A2CF;
+        text-align: center;
+      }
       footer{
         background-color:#A46097;
         padding: 200px;
@@ -95,6 +99,7 @@ session_start();
       .Account:hover{
         background-color:#CFA6C2;
       }
+
       .createmock{{
   position: absolute;
   top: 50%;
@@ -154,7 +159,7 @@ session_start();
 
     }
     else{
-      echo "<h1> <br> Welcome to the Mocktail Website</h1>";}
+      echo "<h1> <br> Welcome to Mixolotl!</h1>";}
    
   /*
     
@@ -203,6 +208,15 @@ session_start();
 <section id ="AccountMocktail"class = "Account" onclick="Account()">
   <div class="description">
     <h2><u> Account</u> </h2>
+    <p> </p>
+    
+</div>
+</section>
+
+<section id ="Axolotl"class = "Axolotl" >
+  <div class="description">
+    <img src = "images/axolotl.jpg" alt="Mixolotl" height = "200"
+        width="200">
     <p> </p>
     
 </div>

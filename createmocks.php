@@ -123,5 +123,6 @@ header{
 <input type="submit">
 </form>
 </main>
+<footer></footer>
 </body>
 </html>

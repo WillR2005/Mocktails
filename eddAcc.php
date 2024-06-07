@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,9 +48,68 @@
   text-decoration: none;
   display: block;
 }
+main{
+        height:550px ;
+        width: 500px;
+        max-width: 50vw;
+        background-color: rgb(230, 203, 230);
+        border: 3px solid #C6A6C7 ;
+        
+        padding: 5px;
+        display:grid;
+        grid: auto / auto auto auto;
+        margin-left: auto;
+        margin-right: auto;
+       
+        
+        
+      }
+      section{
+        margin: 10px;
+        padding: 5px;
+        height: 50px;
+        width: 500px;
+        margin-left: auto;
+       margin-right: auto;
+        background-color: #E0B8EB;
+        border: 3px solid #C6A6C7 ;
+        
+        
+      }
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #6A7A9E;}
+footer{
+        background-color:#A46097;
+        padding: 200px;
+        display: flex;
+        position: fixed;
+       left: 0; 
+       right: 0;
+      }
+
+      
+      
+      
+      button:hover {
+  opacity:1;
+}
+
+
+
+.logout{
+  height:200px ;
+}
+.edit{
+  height:200px ;
+}
+
+
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+    width: 100%;
+  }
+}
 </style>
 <body>
 <header>
@@ -60,7 +123,36 @@
   </div>
 </div>
 </header>
+<br>
+<main>
+<button class="edit" onclick="edit()">Edit Mocktails</button>
+<br>
+<br>
+<br>
+
+<button class="logout" onclick="logout()">Logout</button>
 
 
+
+<script>
+function logout(){
+    
+   
+    location.replace("logout.php");
+   
+  }
+
+  function edit(){
+    
+   
+    location.replace("editmocks.php");
+   
+  }
+</script>
+    </main>
+    <br>
+
+
+<footer></footer>
 </body>
 </html>

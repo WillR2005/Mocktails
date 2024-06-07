@@ -14,7 +14,7 @@ $ingredients = json_encode("");
 
 $instructions = json_encode("");
 
-$uid =0 ;
+$uid = $_SESSION["Id"] ;
 
 $upStmt->bind_param("sssi",$Title,$ingredients,$instructions,$uid);
 

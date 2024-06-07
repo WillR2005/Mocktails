@@ -19,6 +19,9 @@ session_start();
      left: 0; 
      right: 0;
       }
+      body{
+        background-image: url('images/background.png');
+      }
       footer{
         background-color:#A46097;
         padding: 200px;
@@ -110,11 +113,13 @@ session_start();
 
 
 <body>
+
 <main>
 <form method="post" action="validate.php">
 <br><br><br><br><br><br><br>    
 <input type="text" name= "user">
-<br>    
+<br>
+<br>
 <input type="password" name="pword">
     <br>
     <input type="submit">
